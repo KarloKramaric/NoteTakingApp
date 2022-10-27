@@ -68,7 +68,7 @@ namespace NoteTakingApp
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (titleBox.Text == "")
+            if (titleBox.Text == "" && noteBox.Text == "")
             {
                 MessageBox.Show("Can't save empy note.", "Error - Note is empty");
             }
@@ -91,7 +91,7 @@ namespace NoteTakingApp
 
         private void closeNoteButton_Click(object sender, EventArgs e)
         {
-            if (titleBox.Text == "")
+            if (titleBox.Text == "" && noteBox.Text == "")
             {
                 MessageBox.Show("All notes are closed.", "Error - Note is closed");
             }
@@ -109,6 +109,11 @@ namespace NoteTakingApp
             titleBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
             noteBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
             editing = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

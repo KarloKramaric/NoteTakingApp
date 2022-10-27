@@ -39,6 +39,7 @@ namespace NoteTakingApp
             this.deleteButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.closeNoteButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.previousNotes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,8 +70,9 @@ namespace NoteTakingApp
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(673, 48);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Title:";
+            this.label1.Text = "Note title:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -79,7 +81,7 @@ namespace NoteTakingApp
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(673, 37);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Note:";
+            this.label2.Text = "Note content:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // previousNotes
@@ -87,12 +89,12 @@ namespace NoteTakingApp
             this.previousNotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.previousNotes.BackgroundColor = System.Drawing.Color.White;
             this.previousNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.previousNotes.Location = new System.Drawing.Point(12, 12);
+            this.previousNotes.Location = new System.Drawing.Point(12, 63);
             this.previousNotes.Name = "previousNotes";
             this.previousNotes.RowHeadersWidth = 51;
             this.previousNotes.RowTemplate.Height = 24;
             this.previousNotes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.previousNotes.Size = new System.Drawing.Size(583, 644);
+            this.previousNotes.Size = new System.Drawing.Size(583, 593);
             this.previousNotes.TabIndex = 4;
             this.previousNotes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.previousNotes_CellDoubleClick);
             // 
@@ -144,12 +146,23 @@ namespace NoteTakingApp
             this.closeNoteButton.UseVisualStyleBackColor = false;
             this.closeNoteButton.Click += new System.EventHandler(this.closeNoteButton_Click);
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(589, 48);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Notes list:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // NoteTaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1272, 801);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.closeNoteButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.deleteButton);
@@ -179,6 +192,7 @@ namespace NoteTakingApp
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button closeNoteButton;
+        private System.Windows.Forms.Label label3;
     }
 }
 
